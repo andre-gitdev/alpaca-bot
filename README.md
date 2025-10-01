@@ -15,10 +15,12 @@ Alongside the notebook, the repository now includes a lightweight module that mi
 - `strategy.py` ports the EMA/SMA crossover rules into an importable class with an `on_bar` hook.
 - `runner.py` wires the pieces together, seeds indicators with historical data, and starts the websocket stream.
 
+
 For an interactive walkthrough, open `modular_strategy_demo.ipynb`. The first
 cell applies `nest_asyncio` so the notebook can reuse its existing Jupyter
 event loop when invoking the asynchronous runner—no extra notebook setup
 required.
+
 
 ## Bootstrapping dependencies
 
@@ -35,3 +37,4 @@ are absent. Set ``auto_install=False`` when calling ``ensure_requirements`` if
 you prefer to manage installations manually.
 
 Importing these scripts lets you adjust tickers or trading criteria through configuration rather than editing notebook cells, paving the way for packaging the bot like other open-source trading projects.
+

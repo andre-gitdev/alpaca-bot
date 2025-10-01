@@ -19,6 +19,9 @@ from bootstrap import ensure_requirements
 ensure_requirements()
 
 from alpaca.trading.enums import OrderSide
+
+from alpaca.trading.enums import OrderSide
+
 from config import AllocationConfig, IndicatorConfig, RiskConfig, StrategyConfig
 from indicators import IndicatorSet
 from risk import RiskManager
