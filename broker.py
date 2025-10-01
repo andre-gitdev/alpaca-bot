@@ -11,7 +11,7 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from alpaca.trading.enums import OrderSide, TimeInForce
 from alpaca.trading.requests import MarketOrderRequest
-from alpaca.trading.stream import AccountUpdates
+'''from alpaca.trading.stream import AccountUpdates'''
 
 from config import AlpacaCredentials, StrategyConfig
 
@@ -91,8 +91,8 @@ class AlpacaBroker:
     def subscribe_bars(self, handler: Callable[[Any], Awaitable[None]], *symbols: str):
         self._stream.subscribe_bars(handler, *symbols)
 
-    def subscribe_account_updates(self, handler: Callable[[AccountUpdates], Awaitable[None]]):
-        self._stream.subscribe_trade_updates(handler)
+    '''def subscribe_account_updates(self, handler: Callable[[AccountUpdates], Awaitable[None]]):
+        self._stream.subscribe_trade_updates(handler)'''
 
     async def run_stream(self):
         await self._stream.run()

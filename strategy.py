@@ -30,8 +30,6 @@ from risk import RiskManager
 class EmaSmaStrategy:
     """Implements the SOXL/SOXS crossover logic from the notebook."""
 
-    def __init__(self, broker: "AlpacaBroker", indicators: IndicatorSet, risk: RiskManager):
-
     def __init__(self, broker: AlpacaBroker, indicators: IndicatorSet, risk: RiskManager):
 
         self._broker = broker

@@ -21,3 +21,4 @@ pywebview
 PyQt5
 qtpy
 mplfinance
+nest_asyncio

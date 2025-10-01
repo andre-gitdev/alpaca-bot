@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import asyncio
+import nest_asyncio
+nest_asyncio.apply()
 
 
 from bootstrap import ensure_requirements
