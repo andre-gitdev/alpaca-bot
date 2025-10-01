@@ -3,6 +3,14 @@ from __future__ import annotations
 
 import asyncio
 
+
+from bootstrap import ensure_requirements
+
+# Ensure dependencies are installed before we touch Alpaca SDK modules
+ensure_requirements()
+
+
+
 from alpaca.data.models import Bar
 
 from broker import AlpacaBroker
