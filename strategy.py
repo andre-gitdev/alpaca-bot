@@ -6,9 +6,6 @@ from datetime import datetime
 from typing import Optional, TYPE_CHECKING
 
 
-from typing import Optional, TYPE_CHECKING
-from typing import Optional
-
 
 
 from alpaca.data.models import Bar
@@ -21,6 +18,11 @@ if TYPE_CHECKING:  # pragma: no cover - import only for type checkers
     from broker import AlpacaBroker
 
 
+
+class EmaSmaStrategy:
+    """Implements the SOXL/SOXS crossover logic from the notebook."""
+
+    def __init__(self, broker: "AlpacaBroker", indicators: IndicatorSet, risk: RiskManager):
 from broker import AlpacaBroker
 from indicators import IndicatorSet
 from risk import RiskManager
