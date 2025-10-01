@@ -16,3 +16,4 @@ Alongside the notebook, the repository now includes a lightweight module that mi
 - `runner.py` wires the pieces together, seeds indicators with historical data, and starts the websocket stream.
 
 Importing these scripts lets you adjust tickers or trading criteria through configuration rather than editing notebook cells, paving the way for packaging the bot like other open-source trading projects.
+
