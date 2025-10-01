@@ -22,4 +22,4 @@ PyQt5
 qtpy
 mplfinance
 nest_asyncio
-
+alpaca-py

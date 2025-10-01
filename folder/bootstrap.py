@@ -8,6 +8,7 @@ from typing import Iterable, List
 
 import pkg_resources
 
+path_to_reqs = '/workspaces/alpaca-bot/folder/requirements.txt' #Update if necessary
 
 def read_requirements(path: Path) -> List[str]:
     """Return all requirement specifiers from ``requirements.txt``."""
@@ -39,7 +40,7 @@ def install(requirements: Iterable[str]) -> None:
     subprocess.check_call(command)
 
 
-def ensure_requirements(requirements_path: Path | str = "requirements.txt", *, auto_install: bool = True) -> None:
+def ensure_requirements(requirements_path: Path | str = path_to_reqs, *, auto_install: bool = True) -> None:
     """Ensure that all requirements are present before running demos.
 
     Parameters
