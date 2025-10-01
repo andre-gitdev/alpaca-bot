@@ -1,2 +1,5 @@
 # alpaca-bot
-Bot for stock trading with Alpaca
+
+This repository contains a Deepnote-authored Jupyter notebook that implements a live trading bot for the SOXL ETF using Alpaca's REST and streaming APIs. The notebook seeds EMA(10) and SMA(50) indicators with early-morning REST bar data, subscribes to minute bars via `StockDataStream`, and routes each update through an asynchronous `handle_trade` routine. There the indicators are refreshed and the bot delegates to `execute_trade_logic`, which decides between holding SOXL or its inverse SOXS based on EMA/SMA crossovers.
+
+The trading logic liquidates opposing positions when signals flip, waits for buying power to reset, and then deploys roughly 90% of available cash on the bullish or bearish leg. Supporting coroutines—such as `clear_all_positions` to flatten exposure near the close—and the `main` entry point orchestrate the websocket event loop with `asyncio.run`. The notebook's dependencies span Alpaca SDKs, technical indicator libraries (`talipp`, `ta`), and plotting/GUI packages like `bokeh`, `mplfinance`, and `PyQt5` to accommodate both trading automation and visualization needs.
